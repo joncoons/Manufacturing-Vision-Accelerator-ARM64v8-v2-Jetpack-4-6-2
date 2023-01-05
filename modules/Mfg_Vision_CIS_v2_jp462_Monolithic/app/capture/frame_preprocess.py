@@ -104,7 +104,7 @@ def frame_resize(img, target, model):
             ratio = sw / w
             new_w = sw
             new_h = np.round(h * ratio).astype(int)
-            if new_h < sh:
+            if new_h <= sh:
                 pad_vert = (sh-new_h)/2
                 pad_top, pad_bot = np.floor(pad_vert).astype(int), np.ceil(pad_vert).astype(int)
             pad_left, pad_right = 0, 0
@@ -112,7 +112,7 @@ def frame_resize(img, target, model):
             ratio = sh / h
             new_h = sh
             new_w = np.round(w * ratio).astype(int)
-            if new_w < sw:
+            if new_w <= sw:
                 pad_horz = (sw-new_w)/2
                 pad_left, pad_right = np.floor(pad_horz).astype(int), np.ceil(pad_horz).astype(int)
             pad_top, pad_bot = 0, 0
