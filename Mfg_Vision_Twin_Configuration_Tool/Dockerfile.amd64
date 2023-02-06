@@ -13,6 +13,7 @@
 # 
 # Please note - this only runs on AMD64 architecture due to the CosmosDB Python SDK dependency.
 
+
 FROM visionaccelerator.azurecr.io/edge_base/amd64/python:3.7-slim-buster
 
 RUN mkdir /config && chmod -R 777 /config
